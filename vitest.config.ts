@@ -11,6 +11,7 @@ export default defineConfig({
       extension: ['.js', '.ts', '.tsx'],
       cypress: true,       // instrument code when running Cypress
       requireEnv: false,   // don't require NODE_ENV=test
+      cwd: process.cwd() // ensure relative paths
     }),
   ],
 })
