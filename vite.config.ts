@@ -11,6 +11,7 @@ export default defineConfig({
       extension: [".js", ".ts", ".jsx", ".tsx"],
       requireEnv: false,
       cypress: true,
+      cwd: process.cwd() // ensure relative paths
     }),
   ],
 });
