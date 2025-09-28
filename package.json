@@ -18,7 +18,12 @@
     "test:e2e:coverage": "start-server-and-test dev http://localhost:5173 \"cypress run --e2e --env coverage=true\"; npm run coverage",
     "test:e2e:coverage:noerror": "start-server-and-test dev http://localhost:5173 \"cypress run --e2e --env coverage=true || exit 0\" && npm run coverage",
     "test:component:coverage": "start-server-and-test dev http://localhost:5173 \"cypress run --component --env coverage=true\" && npm run coverage"
-
+  },
+  "nyc": {
+    "cwd": "./",
+    "report-dir": "./coverage",
+    "reporter": ["lcov", "text-summary"],
+    "all": true
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.3",
